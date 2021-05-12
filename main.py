@@ -1,5 +1,7 @@
 from bot.imi_bot import imiBot
-import time
+import time,os
+
+os.chdir(os.path.dirname(__file__))
 def main():
     imi_bot = imiBot()
     imi_bot.run()

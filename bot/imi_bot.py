@@ -35,7 +35,7 @@ class imiBot():
         update.message.reply_text("宁在说什么捏")
 
     def _meow(self,update: Update, _:CallbackContext) -> None:
-        audios = update_audio_cache("../resources/audio/")
+        audios = update_audio_cache("./resources/audio/")
         keyboard = []
         for item in audios:
             keyboard.append([
@@ -49,7 +49,7 @@ class imiBot():
 
     def _button(self,update: Update, _: CallbackContext) -> None:
         query = update.callback_query
-        query.message.reply_audio(audio=open('../resources/audio/' + query.data, 'rb'))
+        query.message.reply_audio(audio=open('./resources/audio/' + query.data, 'rb'))
         query.answer()
 
 
