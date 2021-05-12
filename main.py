@@ -1,9 +1,8 @@
-from bot.bot_body import imiBot
+from bot.imi_bot import imiBot
 import time
 def main():
     imi_bot = imiBot()
-    imi_bot.init()
-    imi_bot.start()
+    imi_bot.run()
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
