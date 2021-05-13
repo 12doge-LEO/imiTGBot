@@ -55,9 +55,10 @@ class dbConnector:
         if filename == '':
             return
         else:
+            print(filename)
             fs = GridFS(self.__client[self._get_collection()], collection=collection)
             if fs.exists({"filename":filename}):
-                for grid_out in fs.find({"filename":"meow2.mp3"}):
+                for grid_out in fs.find({"filename":filename}):
                     return grid_out.read()
             else:
                 print("file not exist")
